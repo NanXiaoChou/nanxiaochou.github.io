@@ -3084,8 +3084,19 @@ var Gitment =
             });
 
             var _slicedToArray = function() {
-                function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true;
-                        _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+                function sliceIterator(arr, i) {
+                    var _arr = [];
+                    var _n = true;
+                    var _d = false;
+                    var _e = undefined;
+                    try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) {
+                        _d = true;
+                        _e = err;
+                    } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } }
+                    return _arr;
+                }
+                return function(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } };
+            }();
 
             var _icons = __webpack_require__(6);
 
@@ -3142,9 +3153,9 @@ var Gitment =
                     user = _ref2.user,
                     error = _ref2.error;
 
-                var container = document.createElement('div');
-                container.lang = "en-US";
-                container.className = 'gitment-container gitment-comments-container';
+                // var container = document.createElement('div');
+                // container.lang = "en-US";
+                // container.className = 'gitment-container gitment-comments-container';
 
                 if (error) {
                     // var errorBlock = document.createElement('div');
@@ -3401,8 +3412,19 @@ var Gitment =
             exports.http = exports.Query = exports.isString = undefined;
 
             var _slicedToArray = function() {
-                function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true;
-                        _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+                function sliceIterator(arr, i) {
+                    var _arr = [];
+                    var _n = true;
+                    var _d = false;
+                    var _e = undefined;
+                    try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) {
+                        _d = true;
+                        _e = err;
+                    } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } }
+                    return _arr;
+                }
+                return function(arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } };
+            }();
 
             exports.getTargetContainer = getTargetContainer;
 
@@ -3551,10 +3573,17 @@ var Gitment =
 
 
             var _createClass = function() {
-                function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i];
+                function defineProperties(target, props) {
+                    for (var i = 0; i < props.length; i++) {
+                        var descriptor = props[i];
                         descriptor.enumerable = descriptor.enumerable || false;
-                        descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true;
-                        Object.defineProperty(target, descriptor.key, descriptor); } } return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+                        descriptor.configurable = true;
+                        if ("value" in descriptor) descriptor.writable = true;
+                        Object.defineProperty(target, descriptor.key, descriptor);
+                    }
+                }
+                return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
+            }();
 
             var _mobx = __webpack_require__(1);
 
